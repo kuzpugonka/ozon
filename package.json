@@ -13,5 +13,8 @@
   "devDependencies": {
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "simple-notify": "^0.5.5"
   }
 }
