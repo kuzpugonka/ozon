@@ -1,11 +1,11 @@
 import Notify from 'simple-notify'
 
-const getData = () => {
-    return fetch('https://ozonbd-46860-default-rtdb.firebaseio.com/goods.json')
+const getData = (str) => {
+    return fetch(`https://ozonbd-46860-default-rtdb.firebaseio.com/goods.json?${str ? `search=${str}` : ''}`)
     .then((response) => {
         // new Notify({
         //     status: 'success',
-        //     title: 'Notify Title',
+        //     title: 'Firebase работает',
         //     text: 'notify text',
         //     effect: 'slide',
         //     type: 3,
@@ -15,9 +15,7 @@ const getData = () => {
             return response.json()
         } else {
             throw new Error('Ошибка запроса')
-        }
-        
-        // return response.json()
+        }        
     })
     .catch(Error => {  
         new Notify({

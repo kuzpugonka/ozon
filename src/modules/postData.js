@@ -13,7 +13,7 @@ const postData = () => {
     },
   })
     .then(res => res.json())
-        
+        // Response можно сократить до res
 }
 
 export default postData
